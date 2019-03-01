@@ -35,7 +35,7 @@ h3 {
 }
 
 body {
-	color: #dedede;
+	color: $brand-primary;
 	font-family: $body-font;
 }
 
@@ -46,6 +46,13 @@ body {
 .current_page_item {
 	a {
 		color: $brand-primary;
+	}
+}
+
+a {
+	color: $brand-primary;
+	&:hover {
+		text-decoration: none;
 	}
 }
 
@@ -88,6 +95,73 @@ body {
 /*------------------------------------------------*/
 /*----------------------[PAGES]-------------------*/
 /*------------------------------------------------*/
+
+//HOMEPAGE///////////////////////////////////////////////////
+
+.home {
+	#heroSection {
+		min-height: 500px;
+		padding: 0;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+		#heroServices {
+			position: absolute;
+			width: 100%;
+			bottom: 15px;
+			background: #1f1062ab;
+			margin-bottom: 0;
+			padding: 10px 25px;
+		    display: inline-flex;
+		    justify-content: space-around;
+		    font-weight: bold;
+		    color: #fff;
+		}
+	}
+	#section2 {
+		padding: 50px 0;
+		#left {
+			h1 {
+				font-weight: bold;
+			}
+		}
+		#right {
+			i {
+				color: #dfa405;
+			}
+			span {
+				font-weight: bold;
+			}
+		}
+	}
+	#section3 {
+		background-color: $brand-primary;
+		background-image: url('../img/schematic.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		padding: 50px 0;
+		#projectSlider {
+			img {
+				border: solid 2px #fff;
+				margin-bottom: 10px;
+			}
+			h5 {
+				font-size: 1rem;
+				text-align: center;
+				font-weight: 600;
+			}
+		}
+	}
+	#section4 {
+		padding: 50px 0;
+		#membershipLogos {
+			display: inline-flex;
+		    justify-content: space-around;
+		    width: 100%;
+		}
+	}
+}
 
 
 /*------------------------------------------------*/
@@ -164,11 +238,21 @@ body {
 /*------------------------------------------------*/
 
 #wrapper-footer {
-	color: $brand-secondary;
-	padding-top: 0;
-	padding-bottom: 0;
-	text-transform: uppercase;
+	background-color: $brand-secondary;
+	background-image: url('../img/schematic.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: #fff;
 	font-size: 12px;
+	#widget1 {
+		img {
+			margin-bottom: 1rem;
+		}
+		span {
+			font-weight: 600;
+		}
+	}
 
 	#footerWidgets {
 		padding: 50px 0;
@@ -178,7 +262,9 @@ body {
 			padding-bottom: 5px;
 		    border-bottom: solid 2px;
 		    text-transform: uppercase;
-		    color: $brand-primary
+		    color: #fff;
+		    font-size: 12px;
+		    font-weight: 600;
 		}
 
 	ul {
@@ -189,7 +275,7 @@ body {
 			margin-bottom: 5px;
 
 			a {
-				color: $brand-primary;
+				color: #fff;
 				text-transform: uppercase;
 				font-size: 12px;
 
@@ -197,23 +283,6 @@ body {
 					text-decoration: none;
 				}
 			}
-		}
-	}
-}
-
-#bottomFooter {
-	background-color: $brand-primary;
-	color: #fff;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	box-shadow: inset 0 20px 30px -15px rgba(0, 0, 0, 0.50);
-	-webkit-box-shadow: inset 0 20px 30px -15px rgba(0, 0, 0, 0.50);
-
-	a {
-		color: #fff;
-
-		&:hover {
-			text-decoration: none;
 		}
 	}
 }

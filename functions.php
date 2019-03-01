@@ -17,11 +17,11 @@ add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
 
-	// Get the theme data
-	$the_theme = wp_get_theme();
+// Get the theme data
+    $the_theme = wp_get_theme();
     wp_enqueue_style( 'child-understrap-styles', get_stylesheet_directory_uri() . '/css/child-theme.min.css', array(), $the_theme->get( 'Version' ) );
     wp_enqueue_script( 'jquery');
-	wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array(), false);
+    wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array(), false);
     wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
@@ -37,31 +37,23 @@ add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 add_filter('widget_text', 'do_shortcode');
 
 
-
-
-
 // *** Theme Styles *** \\
 
 function d4tw_enqueue_styles () {
-    wp_enqueue_style( 'Open Sans', 'https://fonts.googleapis.com/css?family=Open+Sans' );
-    wp_enqueue_style( 'AOS CSS', get_stylesheet_directory_uri() . '/aos/aos.css' );
+    wp_enqueue_style( 'Open Sans', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' );
+    wp_enqueue_style( 'Owl Slider CSS', get_stylesheet_directory_uri() . '/owlcarousel/owl.carousel.min.css' );
+    wp_enqueue_style( 'Owl Slider Nav CSS', get_stylesheet_directory_uri() . '/owlcarousel/owl.theme.default.min.css' );
 }
 add_action('wp_enqueue_scripts', 'd4tw_enqueue_styles');
-
-
-
 
 
 // *** Theme Scripts *** \\
 
 function d4tw_enqueue_scripts () {
    wp_enqueue_script( 'D4TW Theme JS', get_stylesheet_directory_uri() . '/js/d4tw.js', array('jquery'), '1.0.0', true );
-   wp_enqueue_script( 'AOS JS', get_stylesheet_directory_uri() . '/aos/aos.js', array('jquery'), '1.0.0', true );
+   wp_enqueue_script( 'Owl Slider JS', get_stylesheet_directory_uri() . '/owlcarousel/owl.carousel.min.js', array('jquery'), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'd4tw_enqueue_scripts' );
-
-
-
 
 
 // *** Advanced Custom Fields *** \\
@@ -70,9 +62,9 @@ add_action( 'wp_enqueue_scripts', 'd4tw_enqueue_scripts' );
 if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
-		'page_title' 	=> 'Company Profile',
-		'menu_title'	=> 'Company Profile',
-		'menu_slug' 	=> 'company-profile'
+		'page_title' 	=> 'Page Content',
+		'menu_title'	=> 'Page Content',
+		'menu_slug' 	=> 'page-content'
 	));
     
 }
@@ -93,9 +85,6 @@ function my_acf_google_map_api( $api ){
 }
 
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
-
-
-
 
 
 // *** D4TW Custom Dashboard *** \\
@@ -162,20 +151,10 @@ function d4tw_admin_css() {
 add_action('admin_head', 'd4tw_admin_css');
 
 
-
-
-
 // *** Custom Menus *** \\
 
 
-
-
-
-
 // *** Template Tags *** \\
-
-
-
 
 
 // *** User Tweaks & Permissions *** \\
@@ -188,9 +167,6 @@ function d4tw_disable_admin_bar() {
         show_admin_bar(false);
     }
 }
-
-
-
 
 
 // *** Widgets *** \\
@@ -232,36 +208,73 @@ function d4tw_sidebars() {
         'after_title'   => '</h5>',
     );
     register_sidebar( $args );
-
-    $args = array(
-        'id'            => 'footer_3',
-        'class'         => 'footer_3',
-        'name'          => 'Footer 3',
-        'description'   => 'This widget area will appear in the third position of the footer.',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h5 class="widgettitle">',
-        'after_title'   => '</h5>',
-    );
-    register_sidebar( $args );
-
-    $args = array(
-        'id'            => 'footer_4',
-        'class'         => 'footer_4',
-        'name'          => 'Footer 4',
-        'description'   => 'This widget area will appear in the fourth position of the footer.',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h5 class="widgettitle">',
-        'after_title'   => '</h5>',
-    );
-    register_sidebar( $args );
-
 }
 add_action( 'widgets_init', 'd4tw_sidebars' );
 
 
+// *** CUSTOM POST TYPES *** \\
 
+//Projects CPT
+add_action( 'init', 'project_post_type', 0 );
+function project_post_type() {
+// Set UI labels for CPT
+  $labels = array(
+    'name'                => 'Projects',
+    'singular_name'       => 'Project',
+    'menu_name'           => 'Projects',
+    'parent_item_colon'   => 'Parent Project',
+    'all_items'           => 'All Projects',
+    'view_item'           => 'View Project',
+    'add_new_item'        => 'Add New Project',
+    'add_new'             => 'Add New',
+    'edit_item'           => 'Edit Project',
+    'update_item'         => 'Update Project',
+    'search_items'        => 'Search Projects',
+    'not_found'           => 'No Project Found',
+    'not_found_in_trash'  => 'No Project Found in Trash',
+  );
+  
+// Set other options for Custom Post Type
+  $args = array(
+    'label'               => 'Project',
+    'description'         => 'Project',
+    'labels'              => $labels,
+    // Features this CPT supports in Post Editor
+    'supports'            => array( 'title', 'editor', 'page-attributes', 'thumbnail' ),
+    'hierarchical'        => false,
+    'public'              => true,
+    'show_ui'             => true,
+    'show_in_menu'        => true,
+    'show_in_nav_menus'   => true,
+    'show_in_admin_bar'   => true,
+    'menu_position'       => 5,
+    'can_export'          => true,
+    'has_archive'         => true,
+    'exclude_from_search' => false,
+    'publicly_queryable'  => true,
+    'capability_type'     => 'page',
+  );
+  
+  // Registering your Custom Post Type
+  register_post_type( 'Projects', $args );
+}
 
+//Create the Project Category Taxonomy
+add_action( 'init', 'create_project_cat_taxonomy' );
+function create_project_cat_taxonomy() {
+  $labels = array(
+    'add_new_item' => 'Add New Project Category',
+    'view_item' => 'View Project Category',
+    'edit_item' => 'Edit Project Category',
+    'update_item' => 'Update Project Category',
+  );
+  $args = array(
+    'label' => 'Project Category',
+    'rewrite' => array( 'slug' => 'project-category' ),
+    'labels'            => $labels,
+  );
+  register_taxonomy( 'project-category', array( 'projects' ), $args );
+}
 
-// *** WooCommerce *** \\
+//Add the project thumbnail size for slider
+add_image_size( 'project-thumb', 260, 260, array( 'center', 'center' ) );
