@@ -38,6 +38,29 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="hfeed site" id="page">
 
+	<!-- LOGO AREA -->
+	<div id="logoContainerWrapper">
+		<div id = "logoContainer" class="container">
+			<div class="row">
+				<?php 
+					$systems_img = get_field('systems_logo', 'option');
+					$services_img = get_field('services_logo', 'option');
+				?>
+				<div class="col-sm-4">
+					<img src="<?php echo $systems_img['url']; ?>" alt="<?php echo $systems_img['alt']; ?>">
+				</div><!-- .col-sm-4 -->
+				<div class="col-sm-4">
+					<div id="cta">
+						24-Hour Service <i class="ml-1 mr-1 fa fa-caret-right" aria-hidden="true"></i> <?php the_field('phone', 'option'); ?>
+					</div>
+				</div><!-- .col-sm-4 -->
+				<div class="col-sm-4">
+					<img src="<?php echo $services_img['url']; ?>" alt="<?php echo $services_img['alt']; ?>">
+				</div><!-- .col-sm-4 -->
+			</div><!-- .row -->
+		</div><!-- .container -->	
+	</div>
+
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
@@ -51,10 +74,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<span class = "mobileToggle"><i class="fa fa-bars" aria-hidden="true"></i> Menu</span>
 				</button>
 					
-				<a rel = "home" class="navbar-brand" data-itemprop="url" title="<?php echo esc_attr( get_bloginfo( 'name') ); ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img id = "headerLogo" src = "<?php the_field('company_logo', 'option'); ?>" alt = "<?php echo esc_attr( get_bloginfo( 'name') ); ?>">
-				</a>
-
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
 					array(

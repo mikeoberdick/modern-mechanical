@@ -80,9 +80,49 @@ a {
 /*--------------------[HEADER]--------------------*/
 /*------------------------------------------------*/
 
-#navbarNavDropdown {
-	justify-content: flex-end;
+#logoContainerWrapper {
+	background: url('../img/nav_bg.png');
+	background-position: bottom;
+    background-size: cover;
+		#logoContainer {
+		padding: 30px 0;
+		#cta {
+			background: $brand-primary;
+		    border-radius: 5px;
+		    color: white;
+		    padding: 5px;
+		    text-align: center;
+		    text-transform: uppercase;
+		    font-weight: 600;
+
+		    i {
+				color: $brand-tertiary;
+		    }
+		}	
+	}
 }
+
+#wrapper-navbar {
+	border-top: solid 1px #1f106261;
+		#main-menu {
+		width: 100%;
+		justify-content: space-evenly;
+		text-transform: uppercase;
+		.menu-item {
+		flex: 1 1 auto;
+	    text-align: center;
+	    	a {
+	    		padding-top:0;
+	    		padding-bottom: 0;
+	    		display: inline-block;
+	    	}
+		}
+		.menu-item + .menu-item {
+	    border-left: solid 1px $brand-tertiary;
+		}
+	}
+}
+
 
 /*------------------------------------------------*/
 /*-------------------[MENU]-----------------------*/
@@ -97,6 +137,10 @@ a {
 /*------------------------------------------------*/
 
 //HOMEPAGE///////////////////////////////////////////////////
+
+.wrapper {
+	padding: 0;
+}
 
 .home {
 	#heroSection {
@@ -127,7 +171,7 @@ a {
 		}
 		#right {
 			i {
-				color: #dfa405;
+				color: $brand-tertiary;
 			}
 			span {
 				font-weight: bold;

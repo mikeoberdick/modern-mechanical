@@ -10863,10 +10863,42 @@ a {
 /*------------------------------------------------*/
 /*--------------------[HEADER]--------------------*/
 /*------------------------------------------------*/
-#navbarNavDropdown {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
+#logoContainerWrapper {
+  background: url("../img/nav_bg.png");
+  background-position: bottom;
+  background-size: cover; }
+  #logoContainerWrapper #logoContainer {
+    padding: 30px 0; }
+    #logoContainerWrapper #logoContainer #cta {
+      background: #1f1062;
+      border-radius: 5px;
+      color: white;
+      padding: 5px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 600; }
+      #logoContainerWrapper #logoContainer #cta i {
+        color: #dfa405; }
+
+#wrapper-navbar {
+  border-top: solid 1px #1f106261; }
+  #wrapper-navbar #main-menu {
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    text-transform: uppercase; }
+    #wrapper-navbar #main-menu .menu-item {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto;
+      text-align: center; }
+      #wrapper-navbar #main-menu .menu-item a {
+        padding-top: 0;
+        padding-bottom: 0;
+        display: inline-block; }
+    #wrapper-navbar #main-menu .menu-item + .menu-item {
+      border-left: solid 1px #dfa405; }
 
 /*------------------------------------------------*/
 /*-------------------[MENU]-----------------------*/
@@ -10877,6 +10909,9 @@ a {
 /*------------------------------------------------*/
 /*----------------------[PAGES]-------------------*/
 /*------------------------------------------------*/
+.wrapper {
+  padding: 0; }
+
 .home #heroSection {
   min-height: 500px;
   padding: 0;
