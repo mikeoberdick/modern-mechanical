@@ -50,9 +50,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<img src="<?php echo $systems_img['url']; ?>" alt="<?php echo $systems_img['alt']; ?>">
 				</div><!-- .col-sm-4 -->
 				<div class="col-sm-4">
-					<div id="cta">
+					<a href = "tel:8606772222"><div id="cta">
 						24-Hour Service <i class="ml-1 mr-1 fa fa-caret-right" aria-hidden="true"></i> <?php the_field('phone', 'option'); ?>
-					</div>
+					</div></a>
 				</div><!-- .col-sm-4 -->
 				<div class="col-sm-4">
 					<img src="<?php echo $services_img['url']; ?>" alt="<?php echo $services_img['alt']; ?>">

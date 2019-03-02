@@ -186,14 +186,25 @@ a {
 		background-position: center;
 		padding: 50px 0;
 		#projectSlider {
-			img {
-				border: solid 2px #fff;
-				margin-bottom: 10px;
+			.project-slide {
+				img {
+					border: solid 2px #fff;
+					margin-bottom: 10px;
+				}
+				h5 {
+					font-size: 1rem;
+					text-align: center;
+					font-weight: 600;
+				}
 			}
-			h5 {
-				font-size: 1rem;
-				text-align: center;
-				font-weight: 600;
+			.owl-nav {
+				display: flex;
+			    justify-content: space-between;
+			    position: absolute;
+			    top: 100px;
+			    width: 110%;
+			    right: -5%;
+			    margin: 0;
 			}
 		}
 	}
