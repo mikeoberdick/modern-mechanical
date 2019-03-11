@@ -10795,7 +10795,7 @@ html {
 
 h1, h2, h3, h4, h5 {
   color: #1f1062;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 h1 {
   font-size: 2.0736rem; }
@@ -10831,7 +10831,7 @@ h3 {
         font-size: 31.5px; } }
 
 body {
-  color: #1f1062;
+  color: #525252;
   font-family: "Open Sans", sans-serif; }
 
 /*------------------------------------------------*/
@@ -10892,13 +10892,24 @@ a {
       -webkit-box-flex: 1;
           -ms-flex: 1 1 auto;
               flex: 1 1 auto;
-      text-align: center; }
+      text-align: center;
+      padding: .5rem; }
       #wrapper-navbar #main-menu .menu-item a {
         padding-top: 0;
         padding-bottom: 0;
         display: inline-block; }
     #wrapper-navbar #main-menu .menu-item + .menu-item {
       border-left: solid 1px #dfa405; }
+    #wrapper-navbar #main-menu .dropdown-menu {
+      margin-top: 0.4rem;
+      background-color: #1f1062ab; }
+      #wrapper-navbar #main-menu .dropdown-menu .menu-item {
+        text-align: left;
+        border: 0; }
+        #wrapper-navbar #main-menu .dropdown-menu .menu-item a {
+          color: #fff; }
+          #wrapper-navbar #main-menu .dropdown-menu .menu-item a:hover {
+            background: transparent; }
 
 /*------------------------------------------------*/
 /*-------------------[MENU]-----------------------*/
@@ -10909,8 +10920,34 @@ a {
 /*------------------------------------------------*/
 /*----------------------[PAGES]-------------------*/
 /*------------------------------------------------*/
+#pageHeader {
+  padding: 0;
+  min-height: 320px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url("../img/page_banner_bg.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/page_banner_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  #pageHeader h1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    padding: 18px 100px 18px 25px;
+    background: #1f1062ab;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    margin-bottom: 0; }
+
 .wrapper {
-  padding: 0; }
+  padding: 0;
+  padding-bottom: 3rem; }
 
 .home #heroSection {
   min-height: 500px;
@@ -10979,6 +11016,40 @@ a {
         justify-content: space-around;
     width: 100%; }
 
+#construction-services .service_name {
+  font-weight: 600;
+  display: inline;
+  margin-left: 10px; }
+
+#construction-services .service_para {
+  padding-left: 25px; }
+
+#construction-services i {
+  color: #dfa405;
+  font-size: 2rem; }
+
+#maintenance-services #section2 .row:last-of-type {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+#maintenance-services #section2 .service_name .service_wrapper {
+  border: solid 2px #dfa405;
+  padding: 15px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  #maintenance-services #section2 .service_name .service_wrapper h3 {
+    text-align: center;
+    color: #1f1062; }
+
 /*------------------------------------------------*/
 /*--------------------[SIDEBAR]-------------------*/
 /*------------------------------------------------*/
@@ -11021,22 +11092,22 @@ a {
 
 .nf-form-cont ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px; }
 
 .nf-form-cont ::-moz-placeholder {
   /* Firefox 19+ */
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px; }
 
 .nf-form-cont :-ms-input-placeholder {
   /* IE 10+ */
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px; }
 
 .nf-form-cont :-moz-placeholder {
   /* Firefox 18- */
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px; }
 
 @media (max-width: 767.98px) {

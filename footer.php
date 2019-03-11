@@ -41,6 +41,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php wp_footer(); ?>
 
+<?php if ( is_page( 'project-gallery' ) ) { ?>
+	<script>
+	    var containerEl = document.querySelector('#projects');
+	    var mixer = mixitup(containerEl, {
+    load: {
+        filter: '.all'
+    }
+});
+	</script>
+	<?php } ?>
+
 </body>
 
 </html>

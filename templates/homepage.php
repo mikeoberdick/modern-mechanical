@@ -1,4 +1,11 @@
-<?php $image = get_field('hero_image', 'option'); ?>
+<?php /* Template Name: Homepage */ ?>
+
+<?php get_header(); ?>
+
+<div class="wrapper" id="page-wrapper">
+	<main class="site-main" id="main">
+
+		<?php $image = get_field('hero_image', 'option'); ?>
 <div id = "heroSection" tabindex="-1" style = "background-image: url('<?php echo $image['url']; ?>')">
 	<?php if( have_rows('hero_image_services', 'option') ): ?>
 		<ul id = "heroServices" class = "list-unstyled">
@@ -69,3 +76,9 @@
 		<?php endif; ?>
 	</div><!-- .container -->
 </div><!-- #section4 -->
+
+</main><!-- #main -->
+
+</div><!-- #page-wrapper -->
+
+<?php get_footer(); ?>

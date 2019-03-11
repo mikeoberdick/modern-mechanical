@@ -8,9 +8,14 @@ $('#projectSlider').owlCarousel({
 	items: 4,
 	margin: 45,
 	nav: true,
-	navText: ["<img src='/wp-content/themes/wp-understrap/img/slider_nav_prev.png'>","<img src='/wp-content/themes/wp-understrap/img/slider_nav_next.png'>"],
+	navText: ["<img src='./wp-content/themes/wp-understrap/img/slider_nav_prev.png'>","<img src='./wp-content/themes/wp-understrap/img/slider_nav_next.png'>"],
 	loop: true,
 	dots: false
+});
+
+//Project Gallery page pagination "Now Showing..."
+$( ".catButton" ).click(function() {
+$( "span#currentCat" ).text( jQuery(this).text() );
 });
 
 });
