@@ -10860,6 +10860,11 @@ a {
   background-color: #2d178e !important;
   border-color: #1f1062 !important; }
 
+.btn-outline-primary,
+.wpcf7 input[type=submit] {
+  border-color: #1f1062 !important;
+  color: #1f1062 !important; }
+
 /*------------------------------------------------*/
 /*--------------------[HEADER]--------------------*/
 /*------------------------------------------------*/
@@ -11049,6 +11054,46 @@ a {
   #maintenance-services #section2 .service_name .service_wrapper h3 {
     text-align: center;
     color: #1f1062; }
+
+#project-gallery #currentCat {
+  font-weight: 600;
+  border-bottom: solid #dfa405; }
+
+#project-gallery .project {
+  margin-bottom: 3rem; }
+  #project-gallery .project:hover .project_overlay {
+    height: 100% !important; }
+  #project-gallery .project article {
+    position: relative; }
+  #project-gallery .project .project_overlay {
+    padding: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #1f1062ab;
+    bottom: 0;
+    -webkit-transition: height 0.4s ease-out;
+    transition: height 0.4s ease-out;
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    #project-gallery .project .project_overlay h5 {
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 600; }
+    #project-gallery .project .project_overlay p {
+      color: #fff; }
+    #project-gallery .project .project_overlay a {
+      margin-top: auto; }
+      #project-gallery .project .project_overlay a .btn-primary {
+        background-color: #dfa405 !important;
+        border-color: #dfa405 !important;
+        width: 100%; }
 
 /*------------------------------------------------*/
 /*--------------------[SIDEBAR]-------------------*/

@@ -18,4 +18,15 @@ $( ".catButton" ).click(function() {
 $( "span#currentCat" ).text( jQuery(this).text() );
 });
 
+//Project Gallery set height of project overlay to match the project title plus padding
+var paddingTop = $('.project_overlay').css( "padding-top" );
+var paddingBot = $('.project_overlay').css( "padding-bottom" );
+$('.project_overlay h5').each(function() {
+	var headerHeight = $(this).height();
+	var totalHeight = parseInt(paddingTop, 10) + parseInt(paddingBot, 10) + parseInt(headerHeight, 10);
+	$(this).parent().css('height', totalHeight+'px');
+});
+
+
+
 });

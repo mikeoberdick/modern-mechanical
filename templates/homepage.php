@@ -47,7 +47,7 @@
 						$gallery = get_field('photos');
 						$img = $gallery[0];
 					?>
-					<img src = "<?php echo $img['sizes']['project-thumb']; ?>">
+					<img src = "<?php echo $img['sizes']['slider-thumb']; ?>">
 					<h5 class = "text-white"><?php the_field('name'); ?></h5>
 				</div>
 			<?php endwhile; ?>

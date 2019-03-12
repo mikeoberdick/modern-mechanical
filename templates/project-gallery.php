@@ -31,31 +31,41 @@
 			  </div><!-- .dropdown-menu -->
 			</div><!-- .dropdown -->
 		</div><!-- .controls -->
-
-		<div id="catCurrentlyShown">
-			<h5>Currently Viewing <span id = "currentCat">All Projects</span></h5>
-		</div>
-
 	</div><!-- .row -->
 </div><!-- .container-fluid -->
 
 <div id = "projects" class = "container">
 	<div class="row">
+		<div id="catCurrentlyShown" class = "mb-5 col-sm-12">
+			<h5>Currently Viewing <span id = "currentCat">All Projects</span></h5>
+		</div>
 		<?php $custom_query_args = array( 'post_type' => 'projects', 'posts_per_page' => -1 );
 		$custom_query = new WP_Query( $custom_query_args ); ?>
 
 		<?php $i = 0; ?>
 			
-		<?php if ( $custom_query->have_posts() ) : while( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
+		<?php if ( $custom_query->have_posts() ) : while( $custom_query->have_posts() ) : $custom_query->the_post();
+		//If the $i can be divided by 3 evenly then output a closing row
+		if ($i % 3 == 0) {
+			echo '</div><!-- .row --><div class = "row">';
+		} ?>
 
 		<?php $taxonomy = 'project-category';
 		$tax_terms = wp_get_post_terms($post->ID, $taxonomy, array("fields" => "all")); ?>
-
-	<div class = "project mix col-lg-6 col-md-4 all <?php foreach( $tax_terms as $tax_term ): ?><?php echo $tax_term->slug; ?> <?php endforeach; ?>">
+	<div class = "project mix col-lg-4 col-md-6 all <?php foreach( $tax_terms as $tax_term ): ?><?php echo $tax_term->slug; ?> <?php endforeach; ?>">
 		<article <?php post_class(); ?>>
-			<?php the_title(); ?>
+			<?php
+				$gallery = get_field('photos');
+				$img = $gallery[0];
+			?>
+			<img class = "project_featured_image" src = "<?php echo $img['sizes']['project-thumb']; ?>">
+			<div class = "project_overlay">
+				<h5><?php the_field('name'); ?></h5>
+				<?php echo project_excerpt(); ?>
+				<a href = "<?php the_permalink(); ?>"><button class = "btn btn-primary">View Project</button></a>
+			</div>
+			
 	    </article>
-	    <a href = "<?php the_permalink(); ?>">view project</a>
 	</div><!-- .project -->
 
 		<?php 
