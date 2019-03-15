@@ -8,7 +8,7 @@ $('#projectSlider').owlCarousel({
 	items: 4,
 	margin: 45,
 	nav: true,
-	navText: ["<img src='./wp-content/themes/wp-understrap/img/slider_nav_prev.png'>","<img src='./wp-content/themes/wp-understrap/img/slider_nav_next.png'>"],
+	navText: ["<img src='/wp-content/themes/wp-understrap/img/slider_nav_prev.png'>","<img src='/wp-content/themes/wp-understrap/img/slider_nav_next.png'>"],
 	loop: true,
 	dots: false
 });
@@ -25,6 +25,31 @@ $('.project_overlay h5').each(function() {
 	var headerHeight = $(this).height();
 	var totalHeight = parseInt(paddingTop, 10) + parseInt(paddingBot, 10) + parseInt(headerHeight, 10);
 	$(this).parent().css('height', totalHeight+'px');
+});
+
+//Single Project Slider
+$('#singleProjectSlider').owlCarousel({
+	items: 3,
+	margin: 45,
+	nav: true,
+	navText: ["<img src='/wp-content/themes/wp-understrap/img/slider_nav_prev.png'>","<img src='/wp-content/themes/wp-understrap/img/slider_nav_next.png'>"],
+	loop: true,
+	dots: false
+});
+
+//Add fixed class to nav on page scroll
+$(function() {
+    //caches a jQuery object containing the header element
+    var nav = $(".wrapper-navbar");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 103) {
+            nav.addClass('fixed');
+        } else {
+            nav.removeClass('fixed');
+        }
+    });
 });
 
 

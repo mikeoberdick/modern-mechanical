@@ -47,7 +47,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					$services_img = get_field('services_logo', 'option');
 				?>
 				<div class="col-sm-4">
-					<a href="./our-services/project-systems/"><img src="<?php echo $systems_img['url']; ?>" alt="<?php echo $systems_img['alt']; ?>"></a>
+					<a href="<?php echo bloginfo('url'); ?>/our-services/construction/"><img src="<?php echo $systems_img['url']; ?>" alt="<?php echo $systems_img['alt']; ?>"></a>
 				</div><!-- .col-sm-4 -->
 				<div class="col-sm-4">
 					<a href = "tel:8606772222"><div id="cta">
@@ -55,7 +55,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div></a>
 				</div><!-- .col-sm-4 -->
 				<div class="col-sm-4">
-					<a href="./our-services/commercial-residential-services/"><img src="<?php echo $services_img['url']; ?>" alt="<?php echo $services_img['alt']; ?>"></a>
+					<a href="<?php echo bloginfo('url'); ?>/our-services/maintenance-and-service/"><img src="<?php echo $services_img['url']; ?>" alt="<?php echo $services_img['alt']; ?>"></a>
 				</div><!-- .col-sm-4 -->
 			</div><!-- .row -->
 		</div><!-- .container -->	

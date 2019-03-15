@@ -40,9 +40,7 @@ add_filter('widget_text', 'do_shortcode');
 
 function d4tw_enqueue_styles () {
     wp_enqueue_style( 'Open Sans', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Montserrat:400,600' );
-    if ( is_page('homepage') ) {
     wp_enqueue_style( 'Owl Slider CSS', get_stylesheet_directory_uri() . '/owlcarousel/owl.carousel.min.css' );
-    }
 }
 add_action('wp_enqueue_scripts', 'd4tw_enqueue_styles');
 
@@ -51,7 +49,6 @@ add_action('wp_enqueue_scripts', 'd4tw_enqueue_styles');
 
 function d4tw_enqueue_scripts () {
    wp_enqueue_script( 'D4TW Theme JS', get_stylesheet_directory_uri() . '/js/d4tw.js', array('jquery'), '1.0.0', true );
-
    wp_enqueue_script( 'Owl Slider JS', get_stylesheet_directory_uri() . '/owlcarousel/owl.carousel.min.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script( 'MIU JS', get_stylesheet_directory_uri() . '/miu/mixitup.min.js', array('jquery'), '1.0.0', true );
 }
