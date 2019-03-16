@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div id = "maintenance-services" class="wrapper" id="page-wrapper">
+<div id = "maintenance-services" class="wrapper">
 	<main class="site-main" id="main">
 	
 	<?php get_template_part('template-parts/page-header'); ?>
