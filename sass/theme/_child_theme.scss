@@ -280,6 +280,28 @@ a {
 	}
 }
 
+#aboutUs {
+	#certifications {
+		.row:last-of-type {
+			justify-content: center;
+		}
+	.cert_name {
+		.certification_wrapper {
+			border: solid 2px $brand-tertiary;
+		    padding: 15px;
+		    height: 100%;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+			h3 {
+	    		text-align: center;
+	    		color: $brand-primary;
+			}
+		}
+	}		
+}
+}
+
 #construction-services {
 	.service_name {
 		font-weight: 600;
