@@ -44,7 +44,7 @@ $(function() {
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 103) {
+        if (scroll >= 182) {
             nav.addClass('fixed');
         } else {
             nav.removeClass('fixed');
