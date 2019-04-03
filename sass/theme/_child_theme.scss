@@ -127,6 +127,9 @@ a {
 	    		padding-top:0;
 	    		padding-bottom: 0;
 	    		display: inline-block;
+	    		&:hover {
+	    			color: $brand-primary;
+	    		}
 	    	}
 		}
 		.menu-item + .menu-item {
@@ -134,12 +137,13 @@ a {
 		}
 		.dropdown-menu {
 			margin-top: 0.4rem;
-			background-color: rgba($brand-primary, 0.5);
+			background-color: rgba($brand-primary, 0.75);
 			.menu-item {
 				text-align: left;
 				border: 0;
 				a {
 					color: #fff;
+					white-space: inherit;
 					&:hover {
 						background: transparent;
 					}
@@ -295,11 +299,25 @@ a {
 	}
 }
 
-#aboutUs {
-	#certifications {
-		.row:last-of-type {
-			justify-content: center;
-		}
+#construction-services {
+	.service_name {
+		font-weight: 600;
+		display: inline;
+		margin-left: 10px;
+	}
+	.service_para {
+		padding-left: 25px;
+	}
+	i {
+		color: $brand-tertiary;
+    	font-size: 2rem;
+	}		
+}
+
+#certifications {
+	.row:last-of-type {
+		justify-content: center;
+	}
 	.cert_name {
 		.certification_wrapper {
 			border: solid 2px $brand-tertiary;
@@ -313,27 +331,25 @@ a {
 	    		color: $brand-primary;
 			}
 		}
-	}		
-}
-}
-
-#construction-services {
-	.service_name {
-		font-weight: 600;
-		display: inline;
-		margin-left: 10px;
-	}
-	.service_para {
-		padding-left: 25px;
-	}
-	i {
-		color: $brand-tertiary;
-    	font-size: 2rem;
 	}
 }
 
 #maintenance-services {
 	padding-bottom: 0;
+	#services {
+		.service-item-wrapper {
+			display: flex;
+			margin-bottom: 10px;
+			i {
+				color: $yellow;
+				font-size: 1.5rem;
+			}
+			span {
+				margin-left: 10px;
+				font-size: 1.2rem;
+			}
+		}
+	}
 	#section2 {
 		.row:last-of-type {
 			justify-content: center;
@@ -352,6 +368,14 @@ a {
 				}
 			}
 		}		
+	}
+	#section3 {
+		background-color: #173048;
+	    padding: 25px 0;
+	    color: #fff;
+	    h2 {
+	    	color: $yellow;
+	    }
 	}
 	#section4 {
 		position: relative;
@@ -463,6 +487,96 @@ a {
 		i {
 			font-size: 32px;
 			margin-bottom: .5rem;
+		}
+	}
+}
+
+#safety {
+	#award1 {
+		.award-year, .award-name {
+			font-weight: bold;
+			font-size: 2rem;
+		}
+	}
+
+	#award2 {
+		margin-left: 25px;
+		.award-year, .award-name {
+			font-size: 1.8rem;
+		}
+	}
+
+	#award3 {
+		margin-left: 50px;
+		.award-year, .award-name {
+			font-size: 1.6rem;
+		}
+	}
+
+	#award4 {
+		margin-left: 75px;
+		.award-year, .award-name {
+			font-size: 1.4rem;
+		}
+	}
+
+	.award {
+		display: flex;
+		align-items: center;
+		margin-bottom: 25px;
+	    .award-year {
+	    	margin: 0 25px 0 15px;
+		    border-right: solid 2px $yellow;
+		    padding-right: 25px;
+	    	color: $brand-primary;
+	    }
+	    .award-name {
+	    	color: $brand-primary;
+	    }
+	}
+	#section2, #section4 {
+		display: flex;
+		align-items: center;
+	}
+	#section2 {
+		#abcLogo {
+			border: solid 3px $yellow;
+		    border-radius: 5px;
+		    padding: 25px;
+		}
+		.abc-copy {
+			font-size: 1.2rem;
+		}
+	}
+	#section3Wrapper {
+		background-color: $brand-primary;
+	    padding: 25px 0;
+	    color: white;
+	}
+	#section3 {
+		display: flex;
+		align-items: center;
+
+		#left {
+			flex: 50%;
+			font-size: 2rem;
+			color: $brand-primary;
+		}
+		#right {
+			flex: 50%;
+			.foundation-wrapper {
+				display: flex;
+				i {
+				    color: #dfa405;
+					font-size: 2rem;	
+				}
+				span {
+					font-size: 1.2rem;
+					margin-bottom: 10px;
+					display: inline;
+					margin-left: 10px;
+				}
+			}
 		}
 	}
 }

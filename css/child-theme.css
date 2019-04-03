@@ -10909,16 +10909,19 @@ a {
         padding-top: 0;
         padding-bottom: 0;
         display: inline-block; }
+        #wrapper-navbar #main-menu .menu-item a:hover {
+          color: #173048; }
     #wrapper-navbar #main-menu .menu-item + .menu-item {
       border-left: solid 1px #dfa405; }
     #wrapper-navbar #main-menu .dropdown-menu {
       margin-top: 0.4rem;
-      background-color: rgba(23, 48, 72, 0.5); }
+      background-color: rgba(23, 48, 72, 0.75); }
       #wrapper-navbar #main-menu .dropdown-menu .menu-item {
         text-align: left;
         border: 0; }
         #wrapper-navbar #main-menu .dropdown-menu .menu-item a {
-          color: #fff; }
+          color: #fff;
+          white-space: inherit; }
           #wrapper-navbar #main-menu .dropdown-menu .menu-item a:hover {
             background: transparent; }
 
@@ -11049,28 +11052,6 @@ a {
         justify-content: space-around;
     width: 100%; }
 
-#aboutUs #certifications .row:last-of-type {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-
-#aboutUs #certifications .cert_name .certification_wrapper {
-  border: solid 2px #dfa405;
-  padding: 15px;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  #aboutUs #certifications .cert_name .certification_wrapper h3 {
-    text-align: center;
-    color: #173048; }
-
 #construction-services .service_name {
   font-weight: 600;
   display: inline;
@@ -11083,8 +11064,41 @@ a {
   color: #dfa405;
   font-size: 2rem; }
 
+#certifications .row:last-of-type {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+#certifications .cert_name .certification_wrapper {
+  border: solid 2px #dfa405;
+  padding: 15px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  #certifications .cert_name .certification_wrapper h3 {
+    text-align: center;
+    color: #173048; }
+
 #maintenance-services {
   padding-bottom: 0; }
+  #maintenance-services #services .service-item-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 10px; }
+    #maintenance-services #services .service-item-wrapper i {
+      color: #ffc107;
+      font-size: 1.5rem; }
+    #maintenance-services #services .service-item-wrapper span {
+      margin-left: 10px;
+      font-size: 1.2rem; }
   #maintenance-services #section2 .row:last-of-type {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -11105,6 +11119,12 @@ a {
     #maintenance-services #section2 .service_name .service_wrapper h3 {
       text-align: center;
       color: #173048; }
+  #maintenance-services #section3 {
+    background-color: #173048;
+    padding: 25px 0;
+    color: #fff; }
+    #maintenance-services #section3 h2 {
+      color: #ffc107; }
   #maintenance-services #section4 {
     position: relative;
     min-height: 395px;
@@ -11217,6 +11237,92 @@ a {
 #single-project #section3 i {
   font-size: 32px;
   margin-bottom: .5rem; }
+
+#safety #award1 .award-year, #safety #award1 .award-name {
+  font-weight: bold;
+  font-size: 2rem; }
+
+#safety #award2 {
+  margin-left: 25px; }
+  #safety #award2 .award-year, #safety #award2 .award-name {
+    font-size: 1.8rem; }
+
+#safety #award3 {
+  margin-left: 50px; }
+  #safety #award3 .award-year, #safety #award3 .award-name {
+    font-size: 1.6rem; }
+
+#safety #award4 {
+  margin-left: 75px; }
+  #safety #award4 .award-year, #safety #award4 .award-name {
+    font-size: 1.4rem; }
+
+#safety .award {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px; }
+  #safety .award .award-year {
+    margin: 0 25px 0 15px;
+    border-right: solid 2px #ffc107;
+    padding-right: 25px;
+    color: #173048; }
+  #safety .award .award-name {
+    color: #173048; }
+
+#safety #section2, #safety #section4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+#safety #section2 #abcLogo {
+  border: solid 3px #ffc107;
+  border-radius: 5px;
+  padding: 25px; }
+
+#safety #section2 .abc-copy {
+  font-size: 1.2rem; }
+
+#safety #section3Wrapper {
+  background-color: #173048;
+  padding: 25px 0;
+  color: white; }
+
+#safety #section3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  #safety #section3 #left {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    font-size: 2rem;
+    color: #173048; }
+  #safety #section3 #right {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%; }
+    #safety #section3 #right .foundation-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      #safety #section3 #right .foundation-wrapper i {
+        color: #dfa405;
+        font-size: 2rem; }
+      #safety #section3 #right .foundation-wrapper span {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        display: inline;
+        margin-left: 10px; }
 
 /*------------------------------------------------*/
 /*--------------------[SIDEBAR]-------------------*/

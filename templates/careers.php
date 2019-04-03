@@ -17,14 +17,14 @@
 				// vars
 				$title = get_sub_field('job_name');
 					?>
-					<h5 class = "job_title mb-3">
+					<h5 class = "job_title mb-3 ml-3">
 						<?php echo $title; ?>
 					</h5><!-- .job_title -->
 				<?php endwhile; ?>
 				</div><!-- #jobs -->
 				<?php endif; ?>
-				<p>*Currently all our apprenticeship’s positions are unavailable.</p>
-				<p>Applications must be filled out at our office located at:</p>
+				<p>*Applications for apprenticeship positions are available at our office.</p>
+				<p class = "font-weight-bold">Applications must be filled out at our office located at:</p>
 				<p>Modern Mechanical Systems<br>
 				519 Cooke St.<br>
 				Farmington, CT 06032<br>
