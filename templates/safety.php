@@ -16,9 +16,7 @@
 						<img class = "img-fluid d-block mx-auto mb-3" src="<?php echo get_stylesheet_directory_uri(); ?>/img/step_award.png">	
 					</div><!-- .col-sm-6 -->
 					<div class="col-sm-6">
-						<p>Some information here about this award...</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, minima temporibus quo quos at cum quaerat itaque! Ab nobis consequuntur facere perspiciatis aut, voluptate quod, vel minus eaque dolorum sint.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<p>Established in 1989, ABC’s Safety Training Evaluation Process (STEP) was developed and written by contractors, for contractors. Participating ABC member firms measure their safety processes and policies on 20 key components through a detailed questionnaire with the goal of implementing or enhancing safety programs that reduce jobsite incident rates.</p>
 						
 					</div><!-- .col-sm-6 -->
 				</div><!-- .row -->

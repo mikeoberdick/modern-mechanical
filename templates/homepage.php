@@ -55,11 +55,14 @@
 			<?php wp_reset_postdata(); endif; ?>
 
 		</div><!-- #projectSlider -->
+		<div class="mt-3 text-center">
+			<a href = '<?php echo bloginfo('url'); ?>/project-gallery'><button role = 'button' class = 'btn btn-primary btn-lg yellow-btn'>View Projects</button></a>
+		</div>
 	</div><!-- .container -->
 </div><!-- #section3 -->
 
 <div id="section4">
-	<div class="container">
+	<div class="container-fluid">
 		<h3 class = "mb-5 text-center text-uppercase font-weight-bold">Members Of</h3>
 		<?php 
 		$images = get_field('memberships', 'option');

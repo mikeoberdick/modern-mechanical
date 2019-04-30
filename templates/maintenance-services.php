@@ -96,9 +96,10 @@
 	
 	<div id="section4">
 		<div class="row">
-			<div id = "backflowCopy" class="col-md-6 offset-md-6">
+			<div id = "backflowCopy" class="col-md-8 offset-md-6">
 				<h3>NOW OFFERING BACKFLOW TESTING SERVICES!</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis dolores sapiente, facere est obcaecati, fuga incidunt perspiciatis harum dolore officiis natus nulla reiciendis aut recusandae dolorem quisquam vitae rerum omnis?</p>
+				<p>Modern Mechanical Services is pleased to offer backflow testing on all commercially serviceable devices.</p>
+				<p>Annual inspections are required by the state of CT and we test, repair (if needed) or replace and provide tags & reports for all size backflow preventers.</p>
 				<a href = '<?php echo bloginfo('url'); ?>/contact'><button role = 'button' class = 'btn btn-primary btn-lg'>SCHEDULE NOW</button></a>
 			</div><!-- #backflowCopy -->
 		</div><!-- .row -->

@@ -84,6 +84,13 @@ a {
   	}
   }
 
+  .yellow-btn {
+  	background-color: $brand-tertiary !important;
+  	&:hover {
+  		background-color: darken( $brand-tertiary, 10% ) !important;
+  	}
+  }
+
 /*------------------------------------------------*/
 /*--------------------[HEADER]--------------------*/
 /*------------------------------------------------*/
@@ -227,7 +234,7 @@ a {
 	#heroSection {
 		min-height: 500px;
 		padding: 0;
-		background-position: center;
+		background-position: center top;
 		background-size: cover;
 		position: relative;
 		#heroServices {
@@ -248,6 +255,7 @@ a {
 		#left {
 			h1 {
 				font-weight: bold;
+				color: $brand-primary;
 			}
 		}
 		#right {
@@ -397,6 +405,10 @@ a {
   				font-weight: 600;
   				text-transform: uppercase;
   			}
+  			p {
+  				color: #000;
+  				font-size: 1.1rem;
+  			}
   		}
 	}
 }
@@ -431,7 +443,7 @@ a {
 			    position: absolute;
 			    left: 0;
 			    right: 0;
-			    background: #1f1062ab;
+			    background: rgba(23,48,72,.85);
 			    bottom: 0;
 			    transition: height 0.4s ease-out;
 			    overflow-y: hidden;
