@@ -12,7 +12,7 @@
 				<h2><?php echo the_field('construction_services_title', 'option'); ?></h2>
 				<p><?php echo the_field('construction_services_description', 'option'); ?></p>
 				<?php $image = get_field('construction_services_image', 'option'); ?>
-				<img class = "float-right pl-3" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>">
+				<img class = "d-none d-md-block float-right pl-3" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>">
 				<?php if( have_rows('construction_services', 'option') ): ?>
 				<?php while( have_rows('construction_services', 'option') ): the_row(); 
 

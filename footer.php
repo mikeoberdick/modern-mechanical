@@ -15,7 +15,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php if ( is_active_sidebar( 'footer_1') || is_active_sidebar( 'footer_2') || is_active_sidebar( 'footer_3') || is_active_sidebar( 'footer_4') ) { ?>
 
-<div class="wrapper" id="wrapper-footer">
+<div id="wrapper-footer">
 
 	<div class="<?php echo esc_html( $container ); ?>">
 
@@ -35,6 +35,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<?php } ?>
 
+	<div id = "bottomFooter" class = "container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<footer class="site-footer text-center" id="colophon">
+					<div class="site-info">
+						<span>Just another <a target = "_blank" href = "https://wordpress.org/">WordPress</a> website by <a <a target = "_blank" href = "http://www.designs4theweb.com">Designs 4 The Web</a></span>
+					</div><!-- .site-info -->
+				</footer><!-- #colophon -->
+			</div><!--col end -->
+		</div><!-- row end -->
+	</div><!-- .container-fluid -->
 </div><!-- wrapper end -->
 
 </div><!-- #page-wrapper -->
@@ -45,9 +56,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<script>
 	    var containerEl = document.querySelector('#projects');
 	    var mixer = mixitup(containerEl, {
-    load: {
-        filter: '.all'
-    }
+    	load: {
+        	filter: '.all'
+    	}
 });
 	</script>
 	<?php } ?>

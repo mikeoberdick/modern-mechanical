@@ -19,7 +19,7 @@
 		</div><!-- .row -->
 
 		<div id="services" class = "mb-5">
-			<div class="row mb-3">
+			<div class="row mb-md-3">
 				<?php $services = get_field('maintenance_services', 'option');
 				//Remove the extra space after the comma
 				$services = str_replace( ', ', ',', $services );
@@ -31,10 +31,10 @@
 				foreach ( $items as $item ) :
 				//If the $i can be divided by 3 evenly then output a closing row
 					if ($i % 3 == 0) {
-						echo '</div><!-- .row --><div class = "row mb-3">';
+						echo '</div><!-- .row --><div class = "row mb-md-3">';
 					}
 				    echo "
-				    <div class = 'col-sm-4 service-item-wrapper'>
+				    <div class = 'col-md-4 service-item-wrapper'>
 					    	<i class='fa fa-check' aria-hidden='true'></i>
 					    	<span>$item</span>
 					    </div><!-- .service-wrapper -->";
@@ -95,14 +95,16 @@
 	</div><!-- #certifications -->
 	
 	<div id="section4">
-		<div class="row">
-			<div id = "backflowCopy" class="col-md-8 offset-md-6">
-				<h3>NOW OFFERING BACKFLOW TESTING SERVICES!</h3>
-				<p>Modern Mechanical Services is pleased to offer backflow testing on all commercially serviceable devices.</p>
-				<p>Annual inspections are required by the state of CT and we test, repair (if needed) or replace and provide tags & reports for all size backflow preventers.</p>
-				<a href = '<?php echo bloginfo('url'); ?>/contact'><button role = 'button' class = 'btn btn-primary btn-lg'>SCHEDULE NOW</button></a>
-			</div><!-- #backflowCopy -->
-		</div><!-- .row -->
+		<div class="container-fluid">
+			<div class="row">
+				<div id = "backflowCopy" class="col-md-6 offset-md-6">
+					<h3>NOW OFFERING BACKFLOW TESTING SERVICES!</h3>
+					<p>Modern Mechanical Services is pleased to offer backflow testing on all commercially serviceable devices.</p>
+					<p>Annual inspections are required by the state of CT and we test, repair (if needed) or replace and provide tags & reports for all size backflow preventers.</p>
+					<a href = '<?php echo bloginfo('url'); ?>/contact'><button role = 'button' class = 'btn btn-primary btn-lg'>SCHEDULE NOW</button></a>
+				</div><!-- #backflowCopy -->
+			</div><!-- .row -->
+		</div>
 	</div><!-- #section4 -->
 </main><!-- #main -->
 </div><!-- #page-wrapper -->

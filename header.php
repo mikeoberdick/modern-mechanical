@@ -40,28 +40,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<!-- LOGO AREA -->
 	<div id="logoContainerWrapper">
-		<div id = "logoContainer" class="container">
-			<div class="row">
+		<div id = "logoContainer" class="container-fluid">
 				<?php 
 					$systems_img = get_field('systems_logo', 'option');
 					$services_img = get_field('services_logo', 'option');
 				?>
-				<div class="col-sm-4">
+				<div class = "header-logo">
 					<a href="<?php echo bloginfo('url'); ?>/our-services/construction/">
-						<div id = "systemsLogo"></div>
+						<div id = "systemsLogo"><img class = "img-fluid" src="<?php echo $systems_img['url']; ?>" alt=""></div>
 					</a>
-				</div><!-- .col-sm-4 -->
-				<div id = "ctaWrapper" class="col-sm-4">
-					<a href = "tel:8606772222"><div id="cta">
-						24-Hour Service <i class="ml-1 mr-1 fa fa-caret-right" aria-hidden="true"></i> <?php the_field('phone', 'option'); ?>
+				</div>
+				<div id = "ctaWrapper" class = "text-center">
+					<a href = "tel:8606772222">
+						<div id="cta">
+						<div>24-Hour Service</div> <i class="ml-1 mr-1 fa fa-caret-right" aria-hidden="true"></i> <div><?php the_field('phone', 'option'); ?></div>
 					</div></a>
-				</div><!-- .col-sm-4 -->
-				<div class="col-sm-4">
+				</div>
+				<div class="header-logo">
 					<a href="<?php echo bloginfo('url'); ?>/our-services/maintenance-and-service/">			
-						<div id = "servicesLogo"></div>
+						<div id = "servicesLogo"><img class = "img-fluid" src="<?php echo $services_img['url']; ?>" alt=""></div>
 					</a>
 				</div><!-- .col-sm-4 -->
-			</div><!-- .row -->
 		</div><!-- .container -->	
 	</div>
 

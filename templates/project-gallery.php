@@ -9,27 +9,12 @@
 			<div class="row">
 				
 				<!-- Desktop Project Categories for Sorting -->
-				<div class="col-sm-12 text-center mb-3 controls d-none d-sm-block">
+				<div class="col-sm-12 text-center mb-3 controls">
 					<button class = "btn btn-outline-primary catButton" type="button" data-filter=".all">All Projects</button>
 						<?php $terms = get_terms( array ('taxonomy'=> 'project-category') ); // Get all terms for the project categories ?>
 		    		<?php foreach ( $terms as $term ) { ?>
 		    		<button class = "btn btn-outline-primary catButton" type="button" data-filter=".<?php echo $term->slug; ?>"><?php echo $term->name; ?></button>
 		        	<?php } ?>
-				</div><!-- .controls -->
-
-				<!-- Mobile Project Category Dropdown for Sorting -->
-				<div class="col-sm-12 text-center mb-3 controls d-block d-sm-none">
-					<div class="dropdown">
-					  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</button>
-					  	<div class="dropdown-menu fade" aria-labelledby="dropdownMenuButton">
-					  		<div id = "dropdownInner">
-						  		<a class="dropdown-item catButton" data-filter=".all">All Projects</a>
-						  	<?php foreach ( $terms as $term ) { ?>
-						    	<a class="dropdown-item catButton" data-filter=".<?php echo $term->slug; ?>"><?php echo $term->name; ?></a>
-					    	<?php } ?>
-					    </div><!-- #dropdownInner -->
-					  </div><!-- .dropdown-menu -->
-					</div><!-- .dropdown -->
 				</div><!-- .controls -->
 			</div><!-- .row -->
 		</div><!-- .container-fluid -->

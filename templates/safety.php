@@ -45,10 +45,10 @@
 		</div><!-- #section1 -->
 
 		<div id = "section2" class="row mb-5">
-			<div class="col-sm-3">
+			<div id = "abc" class="col-md-3">
 				<img id = "abcLogo" class = "img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/abc_logo.png" alt="ABC Connecticut Chapter">
 			</div><!-- .col-sm-3 -->
-			<div class="col-sm-9">
+			<div class="col-md-9">
 				<h3>Associated Builders and contractors, Inc.</h3>
 				<p class = "mb-0 abc-copy">The company's objective is to ensure that all work on the project job site is performed in a safe manner conforming and complying with all applicable safety and health regulations and standards.  We are dedicated to our safety program characterized by proactive safety management, jobsite hazard awareness (JHA) and specific safety development.</p>
 			</div><!-- .col-sm-9 -->
@@ -103,7 +103,7 @@
 
 	<div class="container">
 		<div id="section4" class="row">
-			<div class="col-sm-6">
+			<div class="col-md-6 mb-3 mb-md-0">
 				<h3>OSHA Regulations</h3>
 				<p> Our safety training includes the following requirements, is project specific and updated to conform to the latest regulations set forth by OSHA.</p>
 				<ul>
@@ -113,10 +113,10 @@
 					<li>Lock-Out/Tag-Out</li>
 					<li>HAZCOM (Hazardous Communications)</li>
 				</ul>
-			</div><!-- .col-sm-6 -->
-			<div class="col-sm-6">
+			</div><!-- .col-md-6 -->
+			<div class="col-md-6">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/osha.png" alt="OSHA">
-			</div><!-- .col-sm-6 -->
+			</div><!-- .col-md-6 -->
 		</div><!-- #section4 -->
 	</div><!-- .container -->
 	</main><!-- #main -->

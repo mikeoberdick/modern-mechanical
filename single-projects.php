@@ -28,31 +28,33 @@
 					</div><!-- .row -->
 				</div><!-- .col-md-6 -->
 			</div><!-- #section1 -->
-			<?php edit_post_link( ); ?> 
-			<div id = "section2" class="row mt-5">
-				<?php $images = get_field('photos'); ?>
-				<?php $imgNumber = count($images); ?>
-				<?php if ($imgNumber >= 4) { ?>
-					<div id = "singleProjectSlider" class = "mb-3 owl-carousel owl-theme">
-						<?php foreach( $images as $image ): ?>
-						<?php $size = 'project-thumb'; ?>
-						<?php $img = $image['sizes'][ $size ]; ?>
-						<div class = "project-slide">
-						<img src="<?php echo $img; ?>" alt="<?php echo $image['alt']; ?>" />
-						</div>
-				 	<?php endforeach; ?>
-					</div><!-- #singleProjectSlider -->
-				<?php } else { ?>					
-					<div id="singleImageContainer" class = "d-flex w-100 justify-content-center">
-						<?php foreach( $images as $image ): ?>
-						<?php $size = 'project-thumb'; ?>
-						<?php $img = $image['sizes'][ $size ]; ?>
-						<div class = "single-image mr-3">
+			<?php edit_post_link( ); ?>
+			<div id = "section2" class="container">
+				<div class="row mt-5">
+					<?php $images = get_field('photos'); ?>
+					<?php $imgNumber = count($images); ?>
+					<?php if ($imgNumber >= 4) { ?>
+						<div id = "singleProjectSlider" class = "mb-3 owl-carousel owl-theme">
+							<?php foreach( $images as $image ): ?>
+							<?php $size = 'project-thumb'; ?>
+							<?php $img = $image['sizes'][ $size ]; ?>
+							<div class = "project-slide">
 							<img src="<?php echo $img; ?>" alt="<?php echo $image['alt']; ?>" />
-						</div>
-					<?php endforeach; ?>
-				</div><!-- .single-image -->	
-				<?php } ?>
+							</div>
+					 	<?php endforeach; ?>
+						</div><!-- #singleProjectSlider -->
+					<?php } else { ?>					
+						<div id="singleImageContainer" class = "d-flex w-100 justify-content-center">
+							<?php foreach( $images as $image ): ?>
+							<?php $size = 'project-thumb'; ?>
+							<?php $img = $image['sizes'][ $size ]; ?>
+							<div class = "single-image mr-3">
+								<img src="<?php echo $img; ?>" alt="<?php echo $image['alt']; ?>" />
+							</div>
+						<?php endforeach; ?>
+					</div><!-- .single-image -->	
+					<?php } ?>
+				</div><!-- .row -->
 			</div><!-- #section2 -->
 
 			<div id="section3" class="row mt-3">
