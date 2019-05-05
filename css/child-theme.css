@@ -11320,8 +11320,9 @@ a {
       #project-gallery #projects .project {
         width: 100%;
         max-width: 375px; } }
-    #project-gallery #projects .project:hover .project_overlay {
-      height: 100% !important; }
+    @media (min-width: 992px) {
+      #project-gallery #projects .project:hover .project_overlay {
+        height: 100% !important; } }
     #project-gallery #projects .project article {
       position: relative; }
     #project-gallery #projects .project .project_overlay {
@@ -11354,12 +11355,20 @@ a {
         @media (min-width: 992px) {
           #project-gallery #projects .project .project_overlay p {
             font-size: .8rem; } }
-      #project-gallery #projects .project .project_overlay a {
+      #project-gallery #projects .project .project_overlay .btn-primary {
+        background-color: #dfa405 !important;
+        border-color: #dfa405 !important;
         margin-top: auto; }
-        #project-gallery #projects .project .project_overlay a .btn-primary {
-          background-color: #dfa405 !important;
-          border-color: #dfa405 !important;
-          width: 100%; }
+        @media (min-width: 992px) {
+          #project-gallery #projects .project .project_overlay .btn-primary {
+            width: 100%; } }
+        #project-gallery #projects .project .project_overlay .btn-primary a {
+          color: #fff; }
+          @media (min-width: 992px) {
+            #project-gallery #projects .project .project_overlay .btn-primary a {
+              color: #173048; } }
+          #project-gallery #projects .project .project_overlay .btn-primary a:hover {
+            color: #fff; }
 
 @media (max-width: 575.98px) {
   #single-project #section2 .owl-nav {

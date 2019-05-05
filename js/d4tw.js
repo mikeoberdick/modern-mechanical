@@ -35,11 +35,19 @@ $( "span#currentCat" ).text( jQuery(this).text() );
 var paddingTop = $('.project_overlay').css( "padding-top" );
 //var paddingBot = $('.project_overlay').css( "padding-bottom" );
 var marginBot = $('.project_overlay h5').css( "margin-bottom" );
-$('.project_overlay h5').each(function() {
-	var headerHeight = $(this).height();
-	var totalHeight = parseInt(paddingTop, 10) + parseInt(marginBot, 10) + parseInt(headerHeight, 10);
-	$(this).parent().css('height', totalHeight+'px');
-});
+
+if ($(window).width() > 991) {
+    $('.project_overlay h5').each(function() {
+        var headerHeight = $(this).height();
+        var totalHeight = parseInt(paddingTop, 10) + parseInt(marginBot, 10) + parseInt(headerHeight, 10);
+        $(this).parent().css('height', totalHeight+'px');
+    });
+}
+
+//Project gallery functionality on mobile/tablet
+ if ($(window).width() < 600) {
+        $('.header-logo').hide();
+}
 
 //Single Project Slider
 $('#singleProjectSlider').owlCarousel({

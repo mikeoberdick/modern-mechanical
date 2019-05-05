@@ -573,7 +573,9 @@ a {
 	    	position: relative;
 			&:hover {
 				.project_overlay {
-					height: 100% !important;
+					@include media-breakpoint-up(lg) {
+						height: 100% !important;
+					}
 				}
 			}
 			article {
@@ -605,13 +607,22 @@ a {
 						font-size: .8rem;
 			    	}
 			    }
-			    a {
+			    .btn-primary {
+			    	background-color: $brand-tertiary !important;
+			    	border-color: $brand-tertiary !important;
 			    	margin-top: auto;
-				    .btn-primary {
-				    	background-color: $brand-tertiary !important;
-				    	border-color: $brand-tertiary !important;
-				    	width: 100%;
-				    }	
+				    @include media-breakpoint-up(lg) {
+						width: 100%;
+			    	}
+			    	a {
+			    		color: #fff;
+			    		@include media-breakpoint-up(lg) {
+							color: $brand-primary;
+			    		}
+			    		&:hover {
+			    			color: #fff;
+			    		}
+			    	}
 			    }
 			}
 		}		

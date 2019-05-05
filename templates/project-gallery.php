@@ -45,8 +45,8 @@
 						<img class = "project_featured_image" src = "<?php echo $img['sizes']['project-thumb']; ?>">
 						<div class = "project_overlay">
 							<h5><?php the_field('name'); ?></h5>
-							<?php echo project_excerpt(); ?>
-							<a href = "<?php the_permalink(); ?>"><button class = "btn btn-primary">View Project</button></a>
+							<div class = "d-none d-lg-block"><?php echo project_excerpt(); ?></div>
+							<button class = "btn btn-primary"><a href = "<?php the_permalink(); ?>">View Project</a></button>
 						</div>
 				    </article>
 				</div><!-- .project -->
